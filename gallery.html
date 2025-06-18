@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About My Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #000000, #ffffff);
+      color: #222;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .hero-buttons {
+      margin-top: 15px;
+    }
+
+    .hero-buttons a {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 10px 14px;
+      margin: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid white;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .hero-buttons a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .container {
+      display: flex;
+      min-height: 80vh;
+    }
+
+    .side-menu {
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      color: white;
+    }
+
+    .side-menu h3 {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .side-menu button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      background-color: #333333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .side-menu button:hover {
+      background-color: #555555;
+    }
+
+    .gallery-content {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      color: #111;
+    }
+
+    .gallery-title {
+      font-size: 22px;
+      color: #111111;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .image-row img,
+    .image-row video {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER BAR BARU -->
+  <header>
+    <h1> GALLERY ˙✧˖°📷 ༘ ⋆ </h1>
+    <div class="hero-buttons">
+      <a href="index.html">ABOUT ME</a>
+      <a href="education.html">EDUCATION</a>
+      <a href="family.html">FAMILY</a>
+      <a href="friends.html">FRIENDS</a>
+      <a href="favouriteplace.html">FAV PLACE</a>
+      <a href="gallery.html">GALLERY</a>
+    </div>
+  </header>
+
+  <!-- GALLERY LAYOUT -->
+  <div class="container">
+    <div class="side-menu">
+      <h3> ALBUMS >> </h3>
+      <button onclick="showSection('selfie')">Selfie</button>
+      <button onclick="showSection('cloud')">Cloud</button>
+      <button onclick="showSection('food')">Food</button>
+      <button onclick="showSection('animal')">Animal</button>
+      <button onclick="showSection('game')">Game</button>
+      <button onclick="showSection('people')">People</button>
+      <button onclick="showSection('video')">Video</button>
+    </div>
+
+    <div class="gallery-content">
+      <!-- Selfie -->
+      <div id="selfie" class="gallery-section">
+        <div class="gallery-title">Selfie</div>
+        <div class="image-row">
+          <img src="nad.jpeg" alt="Nadhirah" />
+          <img src="isya.jpeg" alt="Farishah" />
+          <img src="sarah.jpeg" alt="Sarah" />
+          <img src="hawa.jpeg" alt="Hawa" />
+          <img src="mira.jpeg" alt="Mira"/>
+          <img src="shida.jpeg" alt="Shida"/>
+          <img src="sal.jpeg" alt="Sal"/>
+          <img src="kira.jpeg" alt="Kira"/>
+          <img src="pai.jpeg" alt="Pai"/>
+          <img src="miza.jpeg" alt="Miza"/>
+          <img src="saf.jpeg" alt="Saf"/>
+          <img src="cha.jpeg" alt="Cha"/>
+          <img src="tasha.jpeg" alt="Tasha"/>
+          <img src="ila.jpeg" alt="Ila"/>
+          <img src="mekna.jpeg" alt="Mekna"/>
+          <img src="nik.jpeg" alt="Nik"/>
+          <img src="fat.jpeg" alt="Fat"/>
+          <img src="ciko.jpeg" alt="Ciko"/>
+        </div>
+      </div>
+
+      <!-- Cloud -->
+      <div id="cloud" class="gallery-section hidden">
+        <div class="gallery-title">Cloud</div>
+        <div class="image-row">
+          <img src="langit 1.jpeg" alt="Cloud 1" />
+          <img src="langit 2.jpeg" alt="Cloud 2" />
+          <img src="langit 3.jpeg" alt="Cloud 3" />
+          <img src="langit 4.jpeg" alt="Cloud 4" />
+          <img src="langit 5.jpeg" alt="Cloud 5" />
+          <img src="langit 6.jpeg" alt="Cloud 6" />
+          <img src="langit 7.jpeg" alt="Cloud 7" />
+          <img src="langit 8.jpeg" alt="Cloud 8" />
+          <img src="langit 9.jpeg" alt="Cloud 9" />
+          <img src="langit 10.jpeg" alt="Cloud 10" />
+          <img src="langit 11.jpeg" alt="Cloud 11" />
+          <img src="langit 12.jpeg" alt="Cloud 12" />
+          <img src="langit 13.jpeg" alt="Cloud 13" />
+          <img src="langit 14.jpeg" alt="Cloud 14" />
+          <img src="langit 15.jpeg" alt="Cloud 15" />
+          <img src="langit 16.jpeg" alt="Cloud 16" />
+          <img src="langit 17.jpeg" alt="Cloud 17" />
+          <img src="langit 18.jpeg" alt="Cloud 18" />
+        </div>
+      </div>
+
+      <!-- Food -->
+      <div id="food" class="gallery-section hidden">
+        <div class="gallery-title">Food</div>
+        <div class="image-row">
+          <img src="food 1.jpeg" alt="Food 1" />
+          <img src="food 2.jpeg" alt="Food 2" />
+          <img src="food 3.jpeg" alt="Food 3" />
+          <img src="food 4.jpeg" alt="Food 4" />
+          <img src="food 5.jpeg" alt="Food 5" />
+          <img src="food 6.jpeg" alt="Food 6" />
+          <img src="food 7.jpeg" alt="Food 7" />
+          <img src="food 8.jpeg" alt="Food 8" />
+          <img src="food 9.jpeg" alt="Food 9" />
+          <img src="food 10.jpeg" alt="Food 10" />
+          <img src="food 11.jpeg" alt="Food 11" />
+          <img src="food 12.jpeg" alt="Food 12" />
+          <img src="food 13.jpg" alt="Food 13" />
+          <img src="food 14.jpeg" alt="Food 14" />
+          <img src="food 15.jpeg" alt="Food 15" />
+          <img src="food 16.jpeg" alt="Food 16" />
+          <img src="food 17.jpeg" alt="Food 17" />
+          <img src="food 18.jpeg" alt="Food 18" />
+        </div>
+      </div>
+
+      <!-- Animal -->
+      <div id="animal" class="gallery-section hidden">
+        <div class="gallery-title">Animal</div>
+        <div class="image-row">
+          <img src="animal 1.jpeg" alt="Cat" />
+          <img src="animal 2.jpeg" alt="Cat" />
+          <img src="animal 3.jpeg" alt="Cat" />
+          <img src="animal 4.jpeg" alt="Cat" />
+          <img src="animal 5.jpeg" alt="Cat" />
+          <img src="animal 6.jpeg" alt="Cat" />
+          <img src="animal 7.jpeg" alt="Cat" />
+          <img src="animal 8.jpeg" alt="Cat" />
+          <img src="animal 9.jpeg" alt="Cat" />
+          <img src="animal 10.jpeg" alt="Cat" />
+          <img src="animal 11.jpeg" alt="Cat" />
+          <img src="animal 12.jpeg" alt="Cat" />
+          <img src="animal 13.jpeg" alt="Cat"/>
+          <img src="animal 14.jpg" alt="Cat" />
+          <img src="animal 15.jpg" alt="Cat" />
+          <img src="animal 16.jpg" alt="Cat" />
+          <img src="animal 17.jpg" alt="Cat" />
+          <img src="animal 18.jpg" alt="Cat" />
+        </div>
+      </div>
+
+<!-- Game -->
+<div id="game" class="gallery-section hidden">
+  <div class="gallery-title">Game</div>
+  <div class="image-row">
+    <!-- 6 Gambar Game -->
+    <img src="game1.jpeg" alt="Game 1">
+    <img src="game2.jpeg" alt="Game 2">
+    <img src="game3.jpeg" alt="Game 3">
+    <img src="game4.jpeg" alt="Game 4">
+    <img src="game5.jpeg" alt="Game 5">
+    <img src="game6.jpeg" alt="Game 6">
+
+    <!-- 12 Video Game -->
+    <video controls><source src="gamevideo1.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo2.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo3.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo4.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo5.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo6.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo7.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo8.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo9.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo10.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo11.mp4" type="video/mp4" /></video>
+    <video controls><source src="gamevideo12.mp4" type="video/mp4" /></video>
+  </div>
+</div>
+
+
+      <!-- People -->
+<div id="people" class="gallery-section hidden">
+  <div class="gallery-title">People</div>
+  <div class="image-row">
+    <img src="people 1.jpeg" alt="People 1" />
+    <img src="people 2.jpeg" alt="People 2" />
+    <img src="people 3.jpeg" alt="People 3" />
+    <img src="people 4.jpeg" alt="People 4" />
+    <img src="people 5.jpeg" alt="People 5" />
+    <img src="people 6.jpeg" alt="People 6" />
+    <img src="people 7.jpeg" alt="People 7" />
+    <img src="people 8.jpeg" alt="People 8" />
+    <img src="people 9.jpeg" alt="People 9" />
+    <img src="people 10.jpeg" alt="People 10" />
+    <img src="people 11.jpeg" alt="People 11" />
+    <img src="people 12.jpeg" alt="People 12" />
+    <img src="people 13.jpeg" alt="People 13" />
+    <img src="people 14.jpeg" alt="People 14" />
+    <img src="people 15.jpeg" alt="People 15" />
+    <img src="people 16.jpeg" alt="People 16" />
+    <img src="people 17.jpeg" alt="People 17" />
+    <img src="people 18.jpeg" alt="People 18" />
+  </div>
+</div>
+
+
+      <!-- Video -->
+<div id="video" class="gallery-section hidden">
+  <div class="gallery-title">Video</div>
+  <div class="image-row">
+    <video controls>
+      <source src="video 1.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 2.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 3.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 4.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 5.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 6.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 7.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 8.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 9.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 10.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 11.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 12.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 13.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 14.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 15.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 16.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 17.mp4" type="video/mp4" />
+    </video>
+    <video controls>
+      <source src="video 18.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>All rights reserved by shidasham, 2025</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.gallery-section');
+      sections.forEach((sec) => sec.classList.add('hidden'));
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

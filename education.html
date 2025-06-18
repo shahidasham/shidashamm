@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Education</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #000000, #444444, #ffffff);
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.95);
+      color: white;
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .hero-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding-bottom: 20px;
+    }
+
+    .hero-buttons a {
+      padding: 10px 18px;
+      border: 2px solid white;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: transparent;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .hero-buttons a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #f0f0f0;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: linear-gradient(to bottom, #222222, #555555);
+      color: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .slideshow {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .slideshow img, .slideshow video {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .lightbox-content img,
+    .lightbox-content video {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> ˙✧˖°⋆｡˚EDUCATION JOURNEY ˙✧˖°⋆｡˚</h1>
+    <div class="hero-buttons">
+      <a href="index.html">ABOUT ME</a>
+      <a href="education.html">EDUCATION</a>
+      <a href="family.html">FAMILY</a>
+      <a href="friends.html">FRIENDS</a>
+      <a href="favouriteplace.html">FAV PLACE</a>
+      <a href="gallery.html">GALLERY</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>˙✧˖°🎓👩🏻‍🎓 ༘⋆｡</h2>
+    <div class="card-container">
+
+      <!-- PRIMARY -->
+      <div class="card">
+        <img src="sk.png" alt="Primary School">
+        <h3 onclick="toggleSlideshow('primary')">📘 Primary School</h3>
+        <p>SK Kuala Medang (2008–2016) was where I built my academic foundation and enjoyed my childhood learning.</p>
+        <div id="primary" class="slideshow">
+          <img src="primary1.png" onclick="showLightbox(this)">
+        </div>
+      </div>
+
+      <!-- SECONDARY -->
+      <div class="card">
+        <img src="smk.png" alt="Secondary School">
+        <h3 onclick="toggleSlideshow('secondary')">🏫 Secondary School</h3>
+        <p>At SMK Felda Sungai Koyan (2017–2021), I explored new subjects and took part in many school activities.</p>
+        <div id="secondary" class="slideshow">
+          <img src="secondary1.jpeg" onclick="showLightbox(this)">
+          <img src="secondary2.jpeg" onclick="showLightbox(this)">
+          <img src="secondary3.jpeg" onclick="showLightbox(this)">
+        </div>
+      </div>
+
+      <!-- UiTM -->
+      <div class="card">
+        <img src="uitm.jpg" alt="UiTM Machang">
+        <h3 onclick="toggleSlideshow('uitm')">🎓 UiTM Machang</h3>
+        <p>Currently studying for a diploma (2023–2025) in UiTM Machang. It's a place where I grow and prepare for the future.</p>
+        <div id="uitm" class="slideshow">
+          <img src="uitm1.jpeg" onclick="showLightbox(this)">
+          <img src="uitm2.jpeg" onclick="showLightbox(this)">
+          <img src="uitm3.jpeg" onclick="showLightbox(this)">
+          <img src="uitm4.jpeg" onclick="showLightbox(this)">
+          <img src="uitm5.jpeg" onclick="showLightbox(this)">
+          <img src="uitm6.jpeg" onclick="showLightbox(this)">
+          <img src="uitm7.jpeg" onclick="showLightbox(this)">
+          <video src="uitm8.mp4" onclick="showLightbox(this)" muted></video>
+          <video src="uitm9.mp4" onclick="showLightbox(this)" muted></video>
+          <video src="uitm10.mp4" onclick="showLightbox(this)" muted></video>
+          <video src="uitm11.mp4" onclick="showLightbox(this)" muted></video>
+          <video src="uitm12.mp4" onclick="showLightbox(this)" muted></video>
+          <video src="uitm13.mp4" onclick="showLightbox(this)" muted></video>
+          <video src="uitm14.mp4" onclick="showLightbox(this)" muted></video>
+          <video src="uitm15.mp4" onclick="showLightbox(this)" muted></video>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">✖</span>
+    <div class="lightbox-content" id="lightbox-content"></div>
+  </div>
+
+  <script>
+    function toggleSlideshow(id) {
+      const slideshow = document.getElementById(id);
+      const allSlideshows = document.querySelectorAll('.slideshow');
+      allSlideshows.forEach(slide => {
+        if (slide !== slideshow) slide.style.display = 'none';
+      });
+      slideshow.style.display = (slideshow.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function showLightbox(media) {
+      const lightbox = document.getElementById('lightbox');
+      const content = document.getElementById('lightbox-content');
+      content.innerHTML = ''; // clear previous content
+
+      if (media.tagName === 'IMG') {
+        const img = document.createElement('img');
+        img.src = media.src;
+        content.appendChild(img);
+      } else if (media.tagName === 'VIDEO') {
+        const video = document.createElement('video');
+        video.src = media.src;
+        video.controls = true;
+        video.autoplay = true;
+        content.appendChild(video);
+      }
+
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.getElementById('lightbox-content').innerHTML = '';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLightbox();
+      }
+    });
+  </script>
+
+</body>
+</html>

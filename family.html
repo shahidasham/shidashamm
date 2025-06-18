@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Family Moments</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #ffffff, #cccccc, #000000);
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .hero-buttons a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 15px;
+      border: 1px solid white;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+
+    .hero-buttons a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 50px auto;
+      gap: 30px;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+
+    .left-feature {
+      flex: 1 1 55%;
+      background-color: #ffffffee;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+
+    .left-feature h2 {
+      font-size: 28px;
+      margin: 15px 0 10px;
+      color: #111;
+    }
+
+    .left-feature p {
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .left-feature audio {
+      margin: 10px 0 20px;
+      width: 100%;
+    }
+
+    .kodfun-galeri {
+      display: flex;
+      height: 20rem;
+      gap: 1rem;
+      margin-top: 10px;
+    }
+
+    .kodfun-galeri > .galeri-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    }
+
+    .kodfun-galeri > .galeri-item:hover {
+      flex: 5;
+    }
+
+    .galeri-label {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.6);
+      color: white;
+      text-align: center;
+      padding: 5px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .right-grid {
+      flex: 1 1 40%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .video-box {
+      background-color: #ffffffdd;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right-grid video {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .right-grid p {
+      font-size: 14px;
+      margin-top: 8px;
+      color: #222;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .right-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .kodfun-galeri {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .kodfun-galeri > .galeri-item {
+        height: 200px;
+        background-size: cover;
+      }
+
+      .kodfun-galeri > .galeri-item:hover {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1> FAMILY 𓆩♡𓆪 </h1>
+    <div class="hero-buttons">
+      <a href="index.html">ABOUT ME</a>
+      <a href="education.html">EDUCATION</a>
+      <a href="family.html">FAMILY</a>
+      <a href="friends.html">FRIENDS</a>
+      <a href="favouriteplace.html">FAV PLACE</a>
+      <a href="gallery.html">GALLERY</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- LEFT: FAMILY GALLERY + MUSIC -->
+    <div class="left-feature">
+      <h2>Our memories ⋆ ˚｡⋆୨♡୧⋆ ˚｡⋆ </h2>
+      <p>Our journey as a family is full of love, fun and unforgettable memories</p>
+
+      <!-- AUDIO PLAYER -->
+      <audio controls autoplay loop>
+        <source src="lagufamily.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- IMAGE GALLERY WITH LABELS -->
+      <div class="kodfun-galeri">
+        <div class="galeri-item" style="background-image: url('ayah.jpeg');">
+          <div class="galeri-label"> Sham </div>
+        </div>
+        <div class="galeri-item" style="background-image: url('mak.jpeg');">
+          <div class="galeri-label">Linda </div>
+        </div>
+        <div class="galeri-item" style="background-image: url('arma.jpeg');">
+          <div class="galeri-label">Armania </div>
+        </div>
+        <div class="galeri-item" style="background-image: url('saya.jpeg');">
+          <div class="galeri-label">Norshahida</div>
+        </div>
+        <div class="galeri-item" style="background-image: url('kira.jpg');">
+          <div class="galeri-label">Nursyakira</div>
+        </div>
+        <div class="galeri-item" style="background-image: url('merza.jpeg');">
+          <div class="galeri-label">Muhammad Amerza</div>
+        </div>
+        <div class="galeri-item" style="background-image: url('jannah.jpeg');">
+          <div class="galeri-label">Nur Huraiyah Jannah</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: VIDEOS -->
+    <div class="right-grid">
+      <div class="video-box">
+        <video controls poster="thumb1.jpg">
+          <source src="family1.mp4" type="video/mp4">
+        </video>
+        <p>💗ྀི</p>
+      </div>
+      <div class="video-box">
+        <video controls poster="thumb2.jpg">
+          <source src="family2.mp4" type="video/mp4">
+        </video>
+        <p>💖</p>
+      </div>
+      <div class="video-box">
+        <video controls poster="thumb3.jpg">
+          <source src="family3.mp4" type="video/mp4">
+        </video>
+        <p>💕</p>
+      </div>
+      <div class="video-box">
+        <video controls poster="thumb4.jpg">
+          <source src="family4.mp4" type="video/mp4">
+        </video>
+        <p>💌</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
